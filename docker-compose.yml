@@ -1,0 +1,15 @@
+version: "3.9"
+name: otel
+services:
+  otel-lgtm:
+    image: grafana/otel-lgtm
+    networks:
+      - otel
+    ports:
+      - "3000:3000"
+      - "4317:4317"
+      - "4318:4318"
+
+networks:
+  otel:
+    name: otel
